@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 80%;
+    height: 500px;
+    border: 2px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.planta{
+    position: absolute;
+    bottom: -25px;
+    width: 50px;  
+    animation: planta-animation 4s infinite linear;
+}
+
+.grama{
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
+}
+
+.sementeia{
+    position: absolute;
+    bottom: 6px;
+    width: 90px;
+    
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+@keyframes planta-animation {
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 190px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+
